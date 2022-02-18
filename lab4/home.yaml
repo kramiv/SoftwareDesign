@@ -1,0 +1,26 @@
+- View:
+    style:
+      flex: 1
+      flexDirection: row
+    children:
+      - Button:
+         id: to_screen_two
+         style:
+           width: 50
+           height: 50
+           borderRadius: 50%
+           backgroundColor: green
+         on_touch:
+           backgroundColor: rgb(100, 200, 0)
+      - Button:
+         id: button_1
+         style:
+           width: 50
+           height: 50
+           borderRadius: 50%
+           backgroundColor: yellow
+         on_touch:
+           backgroundColor: rgb(255, 255, 150)
+- View:
+    style:
+      flex: 5

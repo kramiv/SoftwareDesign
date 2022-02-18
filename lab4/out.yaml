@@ -1,0 +1,23 @@
+- View:
+    style:
+      flex: 1
+      flexDirection: row
+- View:
+    style:
+      flex: 5
+    children:
+      - Image:
+          source: https://upload.wikimedia.org/wikipedia/commons/2/2b/StOlaf_College_Campus.jpg
+          style:
+            width: 200
+            height: 200
+      - Button:
+          id: to_home_screen
+          style:
+            width: 50
+            height: 50
+            borderRadius: 50%
+            backgroundColor: blue
+          on_touch:
+            backgroundColor: rgb(100, 100, 255)
+

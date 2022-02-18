@@ -1,0 +1,9 @@
+- View:
+    style:
+      flex: 1
+      flexDirection: row
+    children:
+      - Text:
+          style:
+            fontSize: 35
+          index: 1

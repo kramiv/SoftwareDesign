@@ -1,0 +1,40 @@
+CQ1:
+Code: 
+  Food p2(true);
+  p2.print_order();
+
+Error:
+pure_virtual1.cpp: In function ‘int main()’:
+pure_virtual1.cpp:104:8: error: cannot declare variable ‘p2’ to be of abstract type ‘Food’
+   Food p2(true);
+        ^~
+pure_virtual1.cpp:18:7: note:   because the following virtual functions are pure within ‘Food’:
+ class Food {
+       ^~~~
+pure_virtual1.cpp:39:16: note:  ‘virtual void Food::print_order(’
+   virtual void print_order() = 0;
+
+Code: 
+//in Nachos class:
+  //void print_order() { 
+  //  std::cerr << "Nachos: " << '\n'; 
+  //  print_takeout(); 
+  //}
+
+Error:
+pure_virtual1.cpp: In function ‘int main()’:
+pure_virtual1.cpp:90:10: error: cannot declare variable ‘n1’ to be of abstract type ‘Nachos’
+   Nachos n1(false);
+          ^~
+pure_virtual1.cpp:42:7: note:   because the following virtual functions are pure within ‘Nachos’:
+ class Nachos : public Food {
+       ^~~~~~
+pure_virtual1.cpp:39:16: note:  ‘virtual void Food::print_order(’
+   virtual void print_order() = 0;
+
+Reason:
+if a class defines a pure virtual function, then we are not allowed to create an object that 
+is (just) a member of that class!  The compiler imposes this restriction so that there is no 
+danger of calling the pure virtual function when there is no function in a derived class for 
+it to call.  By the same reasoning, if we were to comment out the print_order() method in 
+the Nachos class, then we wouldn't be able to create an object of type Nachos.

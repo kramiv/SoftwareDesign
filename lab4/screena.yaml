@@ -1,0 +1,39 @@
+- View:
+    style:
+      flex: 1
+      flexDirection: row
+    children:
+      - Text:
+          style:
+            fontSize: 35
+          index: 1
+      - Button:
+         id: to_option_a1
+         style:
+           width: 20%
+           height: 50
+           alignItems: center
+           borderRadius: 50%
+           backgroundColor: green
+         on_touch:
+           backgroundColor: rgb(100, 200, 255)
+         children:
+               - Text:
+                   style:
+                     fontSize: 25
+                   index: 71
+      - Button:
+         id: to_option_a2
+         style:
+           width: 20%
+           height: 50
+           alignItems: center
+           borderRadius: 50%
+           backgroundColor: green
+         on_touch:
+           backgroundColor: rgb(100, 200, 255)
+         children:
+               - Text:
+                   style:
+                     fontSize: 25
+                   index: 73

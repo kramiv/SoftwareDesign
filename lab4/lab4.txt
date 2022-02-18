@@ -1,0 +1,112 @@
+ 
+ 
+ Exercise 1:
+
+ - View:
+          style:
+            backgroundColor: aqua
+            width: 200
+            borderRadius: 15
+            marginBottom: 5
+            marginLeft: 50
+          children:
+            - Text: # author
+                index: 10
+                style:
+                  color: green
+                  fontSize: 15
+                  position: absolute
+                  right: 10
+            - Text:  #time
+                index: 1
+                style:
+                  color: gray
+                  fontSize: 10
+                  marginLeft: 10
+            - Text: # message
+                index: 15
+                style:
+                  color: black
+                  fontSize: 20
+                  marginLeft: 10
+
+
+
+
+
+
+
+
+
+
+Exercise 2:
+
+      - View:
+          style:
+            backgroundColor: aqua
+            width: 200
+            borderRadius: 15
+            marginBottom: 5
+            marginLeft: 50
+          children:
+            - Text: # author
+                index: 10
+                style:
+                  color: green
+                  fontSize: 15
+                  marginLeft: 10
+            - Text: # message
+                index: 15
+                style:
+                  color: black
+                  fontSize: 20
+                  marginLeft: 10
+            - Text:  #time
+                index: 1
+                style:
+                  color: gray
+                  fontSize: 10
+                  position: absolute
+                  right: 10
+                  top: 0
+            - Button:
+                style:
+                  width: 100
+                  height: 50
+                  borderRadius: 25
+                  backgroundColor: orange
+                on_touch:
+                  backgroundColor: rgb(255, 200, 0)
+            - Button:
+                style:
+                  width: 100
+                  height: 50
+                  borderRadius: 25
+                  backgroundColor: orange
+                on_touch:
+                  backgroundColor: rgb(255, 200, 255)
+            - HyperLink:
+                url: 'http://wp.stolaf.edu/'
+                style:
+                  letterSpacing: 5
+                index: 10                 
+
+
+
+
+
+
+
+Exercise 3:
+- Picker:
+    style:
+      width: 200
+    index: [10, 16, 24, 31, 36]
+    indexPos: 60
+
+~~~~~~~~~~blue\0~yellow\0~green\0~red\0~orange\0~0~~~~~~~
+
+example:
+~b = 1 spot
+
+

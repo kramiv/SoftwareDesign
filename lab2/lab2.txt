@@ -1,0 +1,20 @@
+Describe in your own words what this program does, 
+from the user point of view.  Then describe (in your 
+own words) how the boolean variable first_time is used 
+to make the behavior what it is.
+    Up to 200 characters, it uses a while loop with a boolean
+    so that there are only two options. Using phrasing "while(1)", 
+    the 'true' will accept user input using std::cout << "Ok, " << user_input << "\n";
+    Then, it will set 'first_time' to false so that it just prints
+    std::cout << "Ok, " << user_input << "\n"; without the first line asking
+    for the user to enter their name.
+    If user doesn't enter their name, then it prints "Ok, " and asks
+    for user input for each time the while loop repeats.
+
+
+    g++ -Wall share2.cpp ../show_mem.o    show_mem.o : .o file is something that a compiler creates during the compiling process that is used to run the code to run the rest of the fucntions?
+
+
+
+
+
