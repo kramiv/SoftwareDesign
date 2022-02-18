@@ -1,0 +1,29 @@
+- Text:
+    style:
+      flex: 1
+      alignSelf: center
+      fontSize: 30
+      color: black
+    index: {top_index}
+      justifyContent: center
+      alignItems: center
+    children:
+      - ColorGrid:
+          style:
+            width: {total_width}
+            height: {total_height}
+            borderWidth: 2
+          extra_props:
+            magnification: {magnification}
+            width: {grid_size}
+            height: {grid_size}
+          index: {offset}
+
+- View:
+    style:
+      flex: 1
+      flexDirection: row
+      justifyContent: space-around
+      alignItems: center
+    children:
+

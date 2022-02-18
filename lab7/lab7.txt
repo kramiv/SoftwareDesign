@@ -1,0 +1,76 @@
+ask exercise 13 1.
+
+Define a function after main but make it work:
+declare the function, define it later.
+
+#include<iostream>
+int increment_twice(int x);  // function declaration
+int main() {
+  std::cerr << increment_twice(3) << std::endl;
+}
+int increment_twice(int x) {  // function definition
+  return x + 2;
+}
+
+
+To use this inside of a class, declare it above public:
+
+class Animal {
+    void init(const char *n, float w);
+public:
+};
+void Animal::init(const char *n, float w) {
+}
+
+
+Exercise 13:
+    1. indicate how intarraydriver.o should be recreated
+        the IntArrayDriver.o needs to be created if these change:
+        IntArrayDriver.cpp IntArray.h 
+  IntArrayDriver.o:  IntArrayDriver.cpp IntArray.h
+    g++ -g -Wall -c IntArrayDriver.cpp
+
+"The file _____ needs to be recreated whenever any of the 
+following files ______ or ______ or _______ change. To
+ recreate the file, issue this command: ________________ "
+
+page 15 diagram of arrows: 3 rows of arrows total. 
+  2nd row of arrows = -c = translation from code to machine readable
+  3rd row = -o     connects the object files together. "link" them. produces executable
+  1rst row just pastes stuff in. (no seperate command. just connects various .cpp files)
+
+file name with nothing after it like IntArrayDriver = the executable
+-g is included to help with debugging information (debugger program. -g)
+-c tells the compiler to create a .o file. but, .o is unnamed. name is assumed to be the same
+  as .cpp file but with .o at the end
+-o gives the name of the final executable. a.out will be default name if name not given for "".o
+
+g++ -Wall -std=c++11 -c IntArray.cpp
+g++ -Wall -std=c++11 -c IntArrayDriver.cpp
+g++ -Wall -std=c++11 -o IntArrayDriver IntArray.o IntArrayDriver.o
+.h -> .cpp -> .o
+          .o all become .exe
+          (.cpp may not have .h)
+-> means that .h was #included in the files. So, it is 
+as if the file is inside of the other file.
+the expanded file becomes the object below it.
+g++ -Wall -o is for .o files
+and -c is for .cpp files
+
+
+
+
+intarray.h has function declarations. defines a .h
+intarray.cpp has the function definitions.
+intarraydriver.cpp has main
+
+
+
+
+
+my new executable:
+g++ -g -Wall -c IntArrayDriver.cpp
+g++ -g -Wall -std=c++11 -o IntArrayDriver IntArray.o IntArrayDriver.o
+shortened version:
+g++ -g -Wall -c IntArrayDriver.cpp
+g++ -g -Wall -std=c++11 -o IntArrayDriver IntArray.o IntArrayDriver.o

@@ -1,0 +1,140 @@
+A.cpp:
+create int z and auto w. Set w = z, which makes
+the type of w the same as z. Both are int
+The type of w is flexible and can change when 
+another value with a different type is set equal
+to it.
+w2 is a reference to z, but w2 can be a refernece to 
+any value and not just to ints like z.
+once a refernece is created, it is used like any 
+other variable
+
+B.cpp:
+It is just printing out all the values in the array
+It is printing int x from arr.
+  for (int x : arr)
+  x = 19;
+For int x = 19, it is unused because x does not
+refer to arr at all.
+  for (int &x : arr)
+    x = 19;
+Above, by making x a reference, each time x is called
+from the array, the code "x = 19" will set that 
+value equal to 19 so it prints out an array of 19s
+in the next loop.
+  for (auto x : arr)
+    std::cerr << x << std::endl;
+This above prints out another array of 19. This is 
+because auto x is actually int &x. So, it will do
+the same thing as the chunk of code above this one.
+
+range-based for loop: it is a loop that prints out values
+of an array or list or something until it runs out. 
+It uses this formatting:
+  for (int x : arr)
+    std::cerr << x << std::endl;
+I can change its values by making x an auto reference
+
+C.cpp:
+int main() {
+std::vector<int> v = {2, 3, 5, 7, 11};
+for (int i = 0; i < 5; ++i)
+std::cerr << v[i] << std::endl;
+}
+This code prints out the same. The formatting of the
+array is difference with std::vector<int> instead of int arr[5]
+However, the length of the std::vector array can change 
+in length, so I can add a value to the array and print out more
+or less than 5 values
+for (int x : v) //type of values, name of array
+    std::cerr << x << std::endl;
+std::cerr << v.size() << std::endl;
+This code above does something with int x for the length of the array
+then it outputs x each time it goes along the array
+then it outputs the size of the array v
+
+v.begin() accesses the 0th spot of the array.
+v.erase(v.begin() + 1) will erase the 1rst spot.
+then there's this     v.insert(v.begin() + 2, 9);
+where I add a comma to say what to include
+v.clear() empties out the whole array
+push_back() adds another element at the end of the array
+
+(Note:  std::vectors can’t do everything.  In particular, because they handle their own memory allocation, you need to be careful if you are using pointers in conjunction with std::vector elements.)
+
+
+D.cpp:
+int main() {
+  std::string s = "hi hi";
+  std::cerr << s[1] << std::endl;  
+  std::cerr << "size " << s.size() << std::endl;
+}
+2nd line outputs s[1] which is "i"
+3rd line outputs the size of the string array
+
+I can output the whole string by referring to its name
+I can also inesrt elements into it.
+The string is not const I think
+
+    s = s + " ok"; // adds " ok" to the end of the string
+  std::string s2 = "ji ji"; // creates a string
+  std::cerr << (s < s2) << std::endl; // s2 must come 
+  later in the alphabet or have more values.
+  total hex value?
+
+
+E.cpp:
+int main() {
+  std::map<std::string, int> price;
+  price["socks"] = 1000;
+  price["shoes"] = 3000;
+  std::cerr << price["socks"] << std::endl;  
+  std::cerr << price.size() << std::endl;
+}
+//I can create an array with elements that are named
+//instead of numbered. 
+  std::cerr << price.size() + 1 << std::endl;
+I got 3, not 2.
+
+ for (auto p : price)
+    std::cerr << p.first << ' ' << p.second << std::endl;
+  if (price.find("boots") == price.end())///
+    std::cerr << "not found" << std::endl;
+  price.erase("socks");
+  for (auto p : price)
+    std::cerr << p.first << ' ' << p.second << std::endl;
+  //skips outputting p.second since not there
+  price.clear();
+//price.end goes to 1 past the length of the array
+//if "boots" is in the array, then it will give a pointer
+//to the location of boots and compare it to price.end()
+//which will always be out of range, so "not found"
+//will always output.
+
+
+
+
+
+
+F.cpp:
+    num[t] = n;//set the string array num's spot t equal to n
+//result: the first column will equal the 2nd column
+    dict[t] = d;//set the string array dict's spot t equal to d
+//result: the first column will equal the phrase of the 3rd column.
+//not sure if these would work since they are different types
+    }
+  std::cerr << num["aardvark"] << ' ' << dict["aardvark"] << std::endl;
+//for the first time through "while (f >> t)", output the 2nd and 3rd column since this is what
+//num["aardvark"] and dict["aardvark"] were set equal to
+  for (auto p : num)//flexible type: output p from string num
+    std::cerr << p.first << ' ' << p.second << std::endl;//p.first and p.second
+//access the first and 2nd columns of data.txt. This loop is repeated for all 3 rows
+//of data.txt's info.
+
+//my experiment was to change "(auto p : num)" to "(auto p : dict)" and see how the first and 2nd
+//columns put out, for num, the first and 2nd column. And, for dict, the first and 3rd column.
+}
+//1 = 2
+//1 = 3
+//output 1 and 2
+//output 1 and 3

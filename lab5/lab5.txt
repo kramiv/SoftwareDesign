@@ -1,0 +1,98 @@
+Image-5F.cpp horizsqueeze method has notes.
+
+
+for h = 2, w = 3:
+    temp[0]: at first row
+            temp[0][0], temp[0][1], temp[0][2]
+    temp[1]: at second row
+            temp[1][0], temp[1][1], temp[1][2]
+
+temp** = memory address
+temp*: deallocate once: temp*[]
+temp: deallocate twice: temp[][]
+
+
+
+
+Pixel** temp;
+temp = new Pixel*[height];
+for (int i = 0; i < height; i++) {
+    temp[i] = new Pixel[width];
+}
+
+
+int i = 0, 0 < 2
+    temp[0] = new Pixel[3]
+    i++ = 1
+int i = 1, 1 < 2
+    temp[1] = new Pixel[3]
+    i++ = 2
+int i = 2   2 < 2 false
+    quit
+
+
+Memory diagram: for tiny.ppm: height = 2, width = 3
+
+temp** ??? @1000
+
+@1000 temp*       (I will call memory addresses by number since lazy)
+    @0
+    @1                //for height = 2 
+                                        
+//array of pixels                       
+                                        
+                                        
+@0 type: Pixel (there will be 3 boxes here)
+    Pixel (3 bytes)
+        red = 255
+        green = 255
+        blue = 255
+    Pixel (3 bytes)
+        ...
+    Pixel (3 bytes)
+        ...
+
+@1 type: Pixel
+    Pixel
+    Pixel
+    Pixel
+
+
+
+
+
+
+
+
+        //loop allocation and deallocation: check for symmetry.
+        //also: when commenting out code, keep track of when arrays are deleted.
+        //and global and class variables.
+        //make sure I don't delete things too much - this was emphasized
+        //a lot in readings. :|
+
+
+
+
+
+        for (int i = 0; 0 < 2; i++) {//h=2(=height. not squeezed)
+            for (int k = 0; 0 < 1; k++) {//w=1
+                temp[0][0].green = data[0][0].green;
+                temp[0][0].blue = data[0][0].blue;
+                temp[0][0].red = data[0][0].red;
+                k = k + 1:
+            for (int k = 1; 1 < 1 fails.)
+                }
+            i = i + 1 = 1
+        for (int i = 1; 1 < 2; i++)
+            for (int k = 0; 0 < 1; k++)
+                temp[1][0].green = data[1][0].green;
+                temp[1][0].blue = data[1][0].blue;
+                temp[1][0].red = data[1][0].red;
+                k = k + 1:
+            for )int k = 1; 1 < 1 fails)
+            }
+            i = i + 1 = 2
+        for (int i = 2; 2 < 2 fails)
+result: go through two rows and set values equal
+    get the values from data: column 0, column 1*2 = 2, column 2*2 = 4
+        0,2,4...
