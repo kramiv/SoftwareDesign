@@ -1,0 +1,58 @@
+- View:
+    style:
+      backgroundColor: brown
+      width: 1900
+      height: 900
+    children:
+    - Text:
+        color: white
+        style:
+          color: white
+          fontSize: 45
+          fontFamily: Cochin
+          fontWeight: bold
+          marginLeft: 38%
+        index: 1700
+    - View:
+        style:
+          flex: 1
+          flexDirection: row
+        children:
+    - Button:
+        style:
+          width: 120
+          height: 50
+          alignItems: center
+          backgroundColor: gray
+          marginLeft: 43%
+          position: absolute
+          left: 0
+          top: 62%
+        on_touch:
+          backgroundColor: rgb(255, 200, 0)
+        children:
+          - Text:
+              color: white
+              style:
+                fontSize: 18
+              index: 1727
+              fontFamily: Cochin
+    - Button:
+        style:
+          width: 70
+          height: 50
+          alignItems: center
+          backgroundColor: gray
+          marginLeft: 45%
+          position: absolute
+          left: 0
+          top: 82%
+        on_touch:
+          backgroundColor: rgb(255, 200, 0)
+        children:
+          - Text:
+              color: white
+              style:
+                fontSize: 18
+              index: 1773
+              fontFamily: Cochin

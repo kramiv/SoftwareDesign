@@ -1,0 +1,45 @@
+- View:
+    style:
+      backgroundColor: brown
+      width: 1900
+      height: 900
+    children:
+      - Button:
+          id: purchase_skin
+          style:
+            width: 33%
+            height: 50
+            alignItems: center
+            backgroundColor: blue
+            marginLeft: 0%
+            position: absolute
+            top: 0
+          on_touch:
+            backgroundColor: rgb(255, 200, 0)
+          children:
+            - Text:
+                style:
+                  fontSize: 18
+                  color: white
+                index: 1829
+                fontFamily: Cochin
+      - Button:
+          id: return_to_hub
+          style:
+            width: 150
+            height: 100
+            alignItems: center
+            backgroundColor: blue
+            marginLeft: 0%
+            position: absolute
+            top: 800
+            left: 1750
+          on_touch:
+            backgroundColor: rgb(255, 200, 0)
+          children:
+            - Text:
+                style:
+                  fontSize: 18
+                  color: white
+                index: 1800
+                fontFamily: Cochin

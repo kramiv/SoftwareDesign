@@ -1,0 +1,11 @@
+- Button:
+    style:
+      width: 150
+      height: 50
+      alignItems: center
+      borderRadius: 25
+      backgroundColor: gray
+      marginLeft: 25%
+      position: absolute
+      left: {left}
+      top: {top}

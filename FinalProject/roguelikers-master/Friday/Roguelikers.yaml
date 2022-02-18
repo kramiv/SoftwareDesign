@@ -1,0 +1,36 @@
+- View:
+    style:
+      backgroundColor: brown
+      width: 1900
+      height: 900
+    children:
+    - Text:
+        style:
+          color: white
+          fontSize: 50
+          fontWeight: bold
+          fontFamily: Cochin
+          marginLeft: 36%
+        index: 1700
+    - Button:
+        style:
+          width: 150
+          height: 50
+          alignItems: center
+          borderRadius: 25
+          backgroundColor: gray
+          marginLeft: 40%
+          position: absolute
+          left: 0
+          top: 200
+        on_touch:
+          backgroundColor: rgb(255, 200, 0)
+        children:
+          - Text:
+              style:
+                color: white
+                fontSize: 35
+                fontWeight: bold
+                fontFamily: cochin
+                marginLeft: 36%
+              index: 1712

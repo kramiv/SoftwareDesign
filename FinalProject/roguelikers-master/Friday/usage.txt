@@ -1,0 +1,34 @@
+1rst page: gives name of game. Click on button to proceed. 
+    It should display "Proceed" but I did not have time to fix this.
+
+2nd page: Homepage. For now, it only has an option to stare a new run.
+    We originally wanted a way to store a few runs and open them.
+There is also a button for settings. This would theoretically adjust
+    things like volume of game music. For now, it is just a button.
+
+3rd page: Hub. 3 buttons: upgrades shop, a clothing shop, and the 
+    dungeon. 
+The upgrades shop leads to a new webpage that should
+    have a working button that call functions that should lower the 
+    player's gold and then increase the player's speed (just have 
+    the player move a bit farther each time the position is updated
+    based on key input).
+The clothing shop is just a button. It was supposed to open a clothing
+    shop yaml where the user could purchase new skins by calling 
+    functions that lower the user's gold and change the color of the
+    user's character in the game.
+The dungeon button leads to the dungeon yaml and calls SetUpRoom().
+
+Dugneon button:
+This is the actual gameplay. There is keyboard functionality that
+    updates the user's character's position and updates gold based on
+    detected conflict. 
+    We wanted to work on expanding gameplay and making it more interesting.
+There should be a button to return to the Hub, but I can not get it to 
+    work for more than one user action so far. 
+
+After we are capable of creating a multi-room dungeon, we wanted
+to find a way to generate new combinations of dungeon rooms for each
+new time opening the entire game.
+
+

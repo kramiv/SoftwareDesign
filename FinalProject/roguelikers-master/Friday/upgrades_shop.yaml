@@ -1,0 +1,45 @@
+- View:
+    style:
+      backgroundColor: brown
+      width: 1900
+      height: 900
+    children:
+      - Button:
+          id: purchase_speed
+          style:
+            width: 20%
+            height: 20%
+            alignItems: center
+            backgroundColor: blue
+            marginLeft: 0%
+            position: absolute
+            top: 20%
+          on_touch:
+            backgroundColor: rgb(255, 200, 0)
+          children:
+            - Text:
+                style:
+                  fontSize: 18
+                  color: white
+                index: 1814
+                fontFamily: Cochin
+      - Button:
+          id: return_to_hub
+          style:
+            width: 150
+            height: 100
+            alignItems: center
+            backgroundColor: blue
+            marginLeft: 20%
+            position: absolute
+            top: 40%
+            left: 30%
+          on_touch:
+            backgroundColor: rgb(255, 200, 0)
+          children:
+            - Text:
+                style:
+                  fontSize: 18
+                  color: white
+                index: 1800
+                fontFamily: Cochin
