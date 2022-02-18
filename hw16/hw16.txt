@@ -1,0 +1,38 @@
+Exercise (CQ1):  What is a situation where you might want to start with an array of one size, and later change it to an array of a different size?  Please write your answer in hw16.txt.
+    Ah. item_price.cpp has an example. 
+
+Exercise CQ2: Explain why the program would appear to run just fine, if we left out the call to delete inside the change_items function.
+    Hm. I don't know for sure, but would only the 
+    third new array value get added? Other new ones
+    don't get recorded at all?
+
+Exercise CQ3:
+It is organized to modify an array all at once. By
+clearing it right before refilling it, you keep track 
+whether it's available.
+
+void f() {
+  int n = 3;
+  // ... more code
+  //this deletes it after each time the function call is complete
+}
+void f2() {
+  int *p = new int;
+  *p = 3;
+  // ... more code
+  //this keeps assigning a new integer over and over
+}
+void f3() {
+  int *p = new int;
+  *p = 3;
+  // ... more code
+  delete p;
+}//add "delete p;" to delete after each function call.
+
+
+
+
+
+
+
+

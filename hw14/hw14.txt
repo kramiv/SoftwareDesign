@@ -1,0 +1,13 @@
+Explanation of what happens in hello3.cpp:
+
+Initial page will have two boxes:
+top box = abcd (0 1 2 3 4)
+bottom = zyx (5 6 7 8)
+
+Once the page is interacted with, character starting
+from (1) which is b will be displayed at the bottom 
+box and in global mem (5)
+
+The top box that can't be edited will still display
+abcd (actually bcd but not sure why). 
+It keeps tacking it on but leaves off soem character

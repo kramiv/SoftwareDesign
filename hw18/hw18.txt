@@ -1,0 +1,4 @@
+CQ1: ***
+    Subtraction works left to right like addition I think.
+
+CQ2: yes

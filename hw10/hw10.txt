@@ -1,0 +1,49 @@
+Exercise CQ1:
+In the situation described above, b[3] would indicate 
+the array element starting at what address in memory? 
+How many bytes would that array element occupy?
+    b[3] start at address 512 and it is 4 bytes long.
+
+Exercise CQ2:
+ Suppose we have another pointer c, of type short *, 
+ that stores the address 800.  If we write c[2], that 
+ would indicate an array element starting at what memory 
+ address?  How many bytes would that array element occupy?
+    I'm not sure that this would work since you need an array
+    to reference specific memory addresses as "c[2]".
+
+Exercise CQ3:  
+In the situation described above, b2[5] would indicate the 
+array element starting at what address in memory?
+    b2[5]=536
+
+Exercise CQ4: 
+The number 0 is quite special in C++: it is used as the 
+first array index, it is used for pointers that go nowhere,
+it is the only number that means false. Can you imagine a 
+situation where the latter two properties could be used 
+together?
+    a pointer that goes nowhere and it means false...
+    maybe it goes to a boolean false?
+
+
+
+//int n1 = length_of("hi");
+
+TEST(HW10, LengthOf) {
+  char g[] = "hello";
+  char h[] = "sziasztok";
+
+  EXPECT_EQ(length_of(g), 5);
+  EXPECT_EQ(length_of(h), 9);
+}
+cat filename   (reads length of filename)
+
+The relevant file can be found in the 
+/usr/local/cs/cs251/test directory.
+
+compile your new file and the file with the test, as follows:
+   make length_of
+
+run the test or tests, as follows:
+   ./length_of

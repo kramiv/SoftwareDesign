@@ -1,0 +1,11 @@
+Exercise:  Please put your answer to this question in a 
+file called hw13.txt How is it different to add text
+ directly to the mem area on the right (just typing in the 
+ letters), versus typing in text on the left into a
+  TextInput?  (Hint:  there are two differences in what
+   happens.)
+
+If you type in on the left side, you have to press enter
+for the mem box to have these characters.
+From the mem box, though, changes are updated to the left side
+immediately

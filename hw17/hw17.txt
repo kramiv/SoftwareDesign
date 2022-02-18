@@ -1,0 +1,17 @@
+Exercise CQ1:
+    class needs a define copy contsructor because there is no array
+    to keep track of in memory and delete in order, create in order,
+    use in order, change class variables without changing original 
+    ones.
+Exercise CQ2:
+    I'm not sure I understand this question.
+    h(); inside main and then void h('Note')?
+    In this case, it would directly affect the Note used.
+Exercise CQ3:
+    We need to use a parameter to reference the class's values
+    and copy them.
+Exercise CQ4:
+    it is called at the end of main
+Exercise CQ5:
+     yes - this is how a copyconstructor gets its own set of data
+    that it can change or delete without changing original copied set.

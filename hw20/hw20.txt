@@ -1,0 +1,8 @@
+CQ1: for Food1.cpp
+Do these classes require a copy constructor or assignment
+operator to prevent memory allocation errors?  Why or why not? 
+    copy constructor = creates a copy at new location
+    assignment operator = assigns new values
+    Well, if dealing with dynamic allocation or with assigning variables,
+    both can be used as with a regular class I think.
+

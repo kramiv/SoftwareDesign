@@ -1,0 +1,13 @@
+- Text:
+    style:
+      fontSize: 30
+      color: purple
+    index: 5
+- TextInput:
+    style:
+      fontSize: 30
+      color: black
+      borderColor: grey
+      borderWidth: 1
+    index: 1
+    len: 10
